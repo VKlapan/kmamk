@@ -1,5 +1,15 @@
-"use client";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+export default async function Home() {
+  const supabase = createServerComponentClient({ cookies });
 
-export default function Home() {
-  return <main>APP</main>;
+  const { data } = await supabase.from("news").select("*");
+
+  console.log(data);
+
+  return (
+    <main>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </main>
+  );
 }
