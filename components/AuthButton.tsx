@@ -14,7 +14,9 @@ export const AuthButton = () => {
     });
   };
 
-  const onLogOut = () => {};
+  const onLogOut = () => {
+    supabase.auth.signOut();
+  };
 
   return (
     <>
