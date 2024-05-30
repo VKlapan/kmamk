@@ -8,6 +8,9 @@ import {
   HeroMain,
   HeroImage,
   HeroList,
+  PartnersList,
+  EventsCalendar,
+  VideoList,
 } from "@/components/StyledComponents";
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies });
@@ -21,7 +24,7 @@ export default async function Home() {
       <header className="flex-none bg-neutral-600 px-10">HEADER</header>
       <main className="flex-grow bg-neutral-900 px-10 pt-4">
         {/* Block: Hero */}
-        <HeroWrapper className="flex gap-4 flex-wrap lg:flex-nowrap">
+        <HeroWrapper className="flex gap-4 flex-wrap lg:flex-nowrap mb-4">
           <HeroMain className="flex flex-col flex-grow w-full lg:min-w-[700px] bg-neutral-600">
             <div id="hero__title">Найголовніше</div>
             <HeroImage className="w-auto h-[400px] relative">
@@ -41,6 +44,14 @@ export default async function Home() {
             NEWS LIST
           </HeroList>
         </HeroWrapper>
+        <PartnersList className="mb-4 w-full bg-neutral-600">
+          Партнери
+        </PartnersList>
+        <EventsCalendar className="mb-4 w-full bg-neutral-600">
+          Календар змагань
+        </EventsCalendar>
+        <VideoList className="mb-4 w-full bg-neutral-600">Відео</VideoList>
+
         {/* <AuthButton />
         <pre>{JSON.stringify(data, null, 2)}</pre> */}
       </main>
