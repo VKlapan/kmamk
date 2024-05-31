@@ -8,9 +8,19 @@ import {
   HeroMain,
   HeroImage,
   HeroList,
+  HeroHeader,
+  HeroH1,
+  HeroH1Icon,
+  HeroH1Wrapper,
+  NewsSimulator,
+  NewsType,
+  NewsTitle,
+  NewsDate,
   PartnersList,
   EventsCalendar,
   VideoList,
+  HeroSlider,
+  HeroSliderItem,
 } from "@/components/StyledComponents";
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies });
@@ -26,7 +36,22 @@ export default async function Home() {
         {/* Block: Hero */}
         <HeroWrapper className="flex gap-4 flex-wrap lg:flex-nowrap mb-4">
           <HeroMain className="flex flex-col flex-grow w-full lg:min-w-[700px] bg-neutral-600">
-            <div id="hero__title">Найголовніше</div>
+            <HeroHeader className="flex justify-between">
+              <HeroH1Wrapper className="flex gap-1">
+                <HeroH1Icon className="flex justify-center items-center">
+                  <svg className="w-4 h-4">
+                    <use href="/icons/utils-sprite.svg#icon-hot"></use>
+                  </svg>
+                </HeroH1Icon>
+                <HeroH1>Найголовніше</HeroH1>
+              </HeroH1Wrapper>
+              <HeroSlider className="flex gap-1">
+                <HeroSliderItem>1</HeroSliderItem>
+                <HeroSliderItem>2</HeroSliderItem>
+                <HeroSliderItem>3</HeroSliderItem>
+                <HeroSliderItem>4</HeroSliderItem>
+              </HeroSlider>
+            </HeroHeader>
             <HeroImage className="w-auto h-[400px] relative">
               <Image
                 src={"/images/anons.png"}
