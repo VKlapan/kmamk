@@ -12,6 +12,7 @@ import {
   HeroH1,
   HeroH1Icon,
   HeroH1Wrapper,
+  Labels,
   NewsSimulator,
   NewsType,
   NewsTitle,
@@ -24,21 +25,26 @@ import {
 } from "@/components/StyledComponents";
 
 import { Partners } from "@/components";
+import { Label } from "@/components/infoLabels/Label";
+
+import { eventStatuses } from "@/mockups/eventStatuses";
+import { newsCategories } from "@/mockups/newsCategories";
+import { simulators } from "@/mockups/simulators";
 
 const partnersMockup = [
-  {id: 1, name:"Partner01", image:'/images/partner01.png'},
-  {id: 2, name:"Partner02", image:'/images/partner02.png'},
-  {id: 3, name:"Partner03", image:'/images/partner03.png'},
-  {id: 4, name:"Partner04", image:'/images/partner04.png'},
-  {id: 5, name:"Partner05", image:'/images/partner05.png'},
-]
+  { id: 1, name: "Partner01", image: "/images/partner01.png" },
+  { id: 2, name: "Partner02", image: "/images/partner02.png" },
+  { id: 3, name: "Partner03", image: "/images/partner03.png" },
+  { id: 4, name: "Partner04", image: "/images/partner04.png" },
+  { id: 5, name: "Partner05", image: "/images/partner05.png" },
+];
 
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies });
 
   const { data } = await supabase.from("news").select("*");
 
-  //console.log(data);
+  console.log(simulators.iracing);
 
   return (
     <>
@@ -74,6 +80,15 @@ export default async function Home() {
                 alt="Anons Image"
               />
             </HeroImage>
+            <Labels className="flex gap-1">
+              <Label type="simulator" value={simulators.iracing} />
+              <Label type="newsCategory" value={newsCategories.broadcast} />
+              <Label type="eventStatus" value={eventStatuses["in-process"]} />
+              <Label
+                type="eventStatus"
+                value={eventStatuses["in-registration"]}
+              />
+            </Labels>
             MAIN NEWS
           </HeroMain>
           <HeroList className="w-full lg:w-72 bg-neutral-600">

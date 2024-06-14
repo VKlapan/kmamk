@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 
+export const Labels = styled.div``;
 //Hero
 
 export const HeroWrapper = styled.div``;
