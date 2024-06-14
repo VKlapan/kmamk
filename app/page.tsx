@@ -22,12 +22,23 @@ import {
   HeroSlider,
   HeroSliderItem,
 } from "@/components/StyledComponents";
+
+import { Partners } from "@/components";
+
+const partnersMockup = [
+  {id: 1, name:"Partner01", image:'/images/partner01.png'},
+  {id: 2, name:"Partner02", image:'/images/partner02.png'},
+  {id: 3, name:"Partner03", image:'/images/partner03.png'},
+  {id: 4, name:"Partner04", image:'/images/partner04.png'},
+  {id: 5, name:"Partner05", image:'/images/partner05.png'},
+]
+
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies });
 
   const { data } = await supabase.from("news").select("*");
 
-  console.log(data);
+  //console.log(data);
 
   return (
     <>
@@ -69,8 +80,8 @@ export default async function Home() {
             NEWS LIST
           </HeroList>
         </HeroWrapper>
-        <PartnersList className="mb-4 w-full bg-neutral-600">
-          Партнери
+        <PartnersList className="mb-4 w-full">
+          <Partners partners={partnersMockup} />
         </PartnersList>
         <EventsCalendar className="mb-4 w-full bg-neutral-600">
           Календар змагань
