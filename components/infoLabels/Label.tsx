@@ -1,16 +1,8 @@
-import {
-  EventStatusType,
-  LabelType,
-  NewsCategoryType,
-  SimulatorType,
-} from "@/types";
+import { LabelItemType, LabelKeyType, LabelType } from "@/types";
 
 type Props = {
   type: LabelType;
-  value: {
-    key: EventStatusType | NewsCategoryType | SimulatorType;
-    name: string;
-  };
+  value: LabelItemType<LabelKeyType>;
 };
 
 export const Label = ({ type, value }: Props) => {

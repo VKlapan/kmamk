@@ -31,6 +31,14 @@ import { eventStatuses } from "@/mockups/eventStatuses";
 import { newsCategories } from "@/mockups/newsCategories";
 import { simulators } from "@/mockups/simulators";
 
+import mockups from "@/mockups/mockups.json";
+import {
+  EventStatusType,
+  MockupType,
+  NewsCategoryType,
+  SimulatorType,
+} from "@/types";
+
 const partnersMockup = [
   { id: 1, name: "Partner01", image: "/images/partner01.png" },
   { id: 2, name: "Partner02", image: "/images/partner02.png" },
@@ -45,6 +53,12 @@ export default async function Home() {
   const { data } = await supabase.from("news").select("*");
 
   console.log(simulators.iracing);
+
+  const typedMockups = {
+    eventStatuses: mockups.eventStatuses as MockupType<EventStatusType>,
+    simulators: mockups.simulators as MockupType<SimulatorType>,
+    newsCategories: mockups.newsCategories as MockupType<NewsCategoryType>,
+  };
 
   return (
     <>
@@ -81,8 +95,11 @@ export default async function Home() {
               />
             </HeroImage>
             <Labels className="flex gap-1">
-              <Label type="simulator" value={simulators.iracing} />
-              <Label type="newsCategory" value={newsCategories.broadcast} />
+              <Label type="simulator" value={typedMockups.simulators.iracing} />
+              <Label
+                type="newsCategory"
+                value={typedMockups.newsCategories.broadcast}
+              />
               <Label type="eventStatus" value={eventStatuses["in-process"]} />
               <Label
                 type="eventStatus"

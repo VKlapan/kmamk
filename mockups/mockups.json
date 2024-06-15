@@ -1,0 +1,44 @@
+{
+  "eventStatuses": {
+    "in-process": {
+      "key": "in-process",
+      "name": "В процесі"
+    },
+    "registration-date": {
+      "key": "registration-date",
+      "name": "Початок реєстрації"
+    },
+    "in-registration": {
+      "key": "in-registration",
+      "name": "Реєстрація відкрита"
+    }
+  },
+  "simulators": {
+    "iracing": {
+      "key": "iracing",
+      "name": "iRacing"
+    },
+    "assetto-corsa": {
+      "key": "assetto-corsa",
+      "name": "Assetto Corsa"
+    },
+    "raceroom": {
+      "key": "raceroom",
+      "name": "RaceRoom"
+    }
+  },
+  "newsCategories": {
+    "broadcast": {
+      "key": "broadcast",
+      "name": "Трансляція"
+    },
+    "anons": {
+      "key": "anons",
+      "name": "Анонс"
+    },
+    "report": {
+      "key": "report",
+      "name": "Звіт"
+    }
+  }
+}

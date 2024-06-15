@@ -13,3 +13,16 @@ export type Partner = {
   name: string;
   image: string;
 };
+
+export type LabelKeyType = EventStatusType | NewsCategoryType | SimulatorType;
+
+export type LabelItemType<T extends LabelKeyType> = {
+  key: T;
+  name: string;
+};
+
+export type MockupNameType = "eventStatuses" | "simulators" | "newsCategories";
+
+export type MockupType<T extends LabelKeyType> = {
+  [key in T]: LabelItemType<key>;
+};
