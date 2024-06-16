@@ -12,6 +12,7 @@ import {
   HeroH1,
   HeroH1Icon,
   HeroH1Wrapper,
+  HeroDescription,
   Labels,
   NewsSimulator,
   NewsType,
@@ -24,8 +25,7 @@ import {
   HeroSliderItem,
 } from "@/components/StyledComponents";
 
-import { Partners } from "@/components";
-import { Label } from "@/components/infoLabels/Label";
+import { DatePlate, Label, Partners } from "@/components";
 
 import { eventStatuses } from "@/mockups/eventStatuses";
 import { newsCategories } from "@/mockups/newsCategories";
@@ -52,8 +52,6 @@ export default async function Home() {
 
   const { data } = await supabase.from("news").select("*");
 
-  console.log(simulators.iracing);
-
   const typedMockups = {
     eventStatuses: mockups.eventStatuses as MockupType<EventStatusType>,
     simulators: mockups.simulators as MockupType<SimulatorType>,
@@ -66,15 +64,15 @@ export default async function Home() {
       <main className="flex-grow bg-neutral-900 px-10 pt-4">
         {/* Block: Hero */}
         <HeroWrapper className="flex gap-4 flex-wrap lg:flex-nowrap mb-4">
-          <HeroMain className="flex flex-col flex-grow w-full lg:min-w-[700px] bg-neutral-600">
+          <HeroMain className="relative flex flex-col flex-grow w-full lg:min-w-[700px] ">
             <HeroHeader className="flex justify-between">
-              <HeroH1Wrapper className="flex gap-1">
+              <HeroH1Wrapper className="flex gap-1 mb-2">
                 <HeroH1Icon className="flex justify-center items-center">
                   <svg className="w-4 h-4">
                     <use href="/icons/utils-sprite.svg#icon-hot"></use>
                   </svg>
                 </HeroH1Icon>
-                <HeroH1>Найголовніше</HeroH1>
+                <HeroH1 className="text-white">Найголовніше</HeroH1>
               </HeroH1Wrapper>
               <HeroSlider className="flex gap-1">
                 <HeroSliderItem>1</HeroSliderItem>
@@ -83,7 +81,7 @@ export default async function Home() {
                 <HeroSliderItem>4</HeroSliderItem>
               </HeroSlider>
             </HeroHeader>
-            <HeroImage className="w-auto h-[400px] relative">
+            <HeroImage className="w-auto h-[400px] relative mb-10">
               <Image
                 src={"/images/anons.png"}
                 fill
@@ -94,19 +92,32 @@ export default async function Home() {
                 alt="Anons Image"
               />
             </HeroImage>
-            <Labels className="flex gap-1">
-              <Label type="simulator" value={typedMockups.simulators.iracing} />
-              <Label
-                type="newsCategory"
-                value={typedMockups.newsCategories.broadcast}
-              />
-              <Label type="eventStatus" value={eventStatuses["in-process"]} />
-              <Label
-                type="eventStatus"
-                value={eventStatuses["in-registration"]}
-              />
-            </Labels>
-            MAIN NEWS
+            <HeroDescription className="flex flex-col gap-3 absolute bottom-0 w-full px-5 py-4">
+              <div className="flex justify-between pt-4 ">
+                <Labels className="flex gap-1">
+                  <Label
+                    type="simulator"
+                    value={typedMockups.simulators.iracing}
+                  />
+                  <Label
+                    type="newsCategory"
+                    value={typedMockups.newsCategories.broadcast}
+                  />
+                  <Label
+                    type="eventStatus"
+                    value={eventStatuses["in-process"]}
+                  />
+                  <Label
+                    type="eventStatus"
+                    value={eventStatuses["in-registration"]}
+                  />
+                </Labels>
+                <DatePlate type="short" date={new Date(Date.now())} />
+              </div>
+              <div className="text-white text-2xl ">
+                Запрошуємо на пряму трансляцію першої клубної гонки 2024 року!
+              </div>
+            </HeroDescription>
           </HeroMain>
           <HeroList className="w-full lg:w-72 bg-neutral-600">
             NEWS LIST

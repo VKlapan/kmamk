@@ -1,1 +1,2 @@
-export {Partners} from "./partners"
+export { Partners } from "./partners";
+export { DatePlate, Label } from "./infoLabels";
