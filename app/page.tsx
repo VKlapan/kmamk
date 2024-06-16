@@ -22,7 +22,6 @@ import {
   EventsCalendar,
   VideoList,
   HeroSlider,
-  HeroSliderItem,
 } from "@/components/StyledComponents";
 
 import { DatePlate, Label, Partners } from "@/components";
@@ -38,6 +37,7 @@ import {
   NewsCategoryType,
   SimulatorType,
 } from "@/types";
+import { SliderItem } from "@/components/SliderItem";
 
 const partnersMockup = [
   { id: 1, name: "Partner01", image: "/images/partner01.png" },
@@ -65,7 +65,7 @@ export default async function Home() {
         {/* Block: Hero */}
         <HeroWrapper className="flex gap-4 flex-wrap lg:flex-nowrap mb-4">
           <HeroMain className="relative flex flex-col flex-grow w-full lg:min-w-[700px] ">
-            <HeroHeader className="flex justify-between">
+            <HeroHeader className="flex justify-between items-center">
               <HeroH1Wrapper className="flex gap-1 mb-2">
                 <HeroH1Icon className="flex justify-center items-center">
                   <svg className="w-4 h-4">
@@ -75,10 +75,11 @@ export default async function Home() {
                 <HeroH1 className="text-white">Найголовніше</HeroH1>
               </HeroH1Wrapper>
               <HeroSlider className="flex gap-1">
-                <HeroSliderItem>1</HeroSliderItem>
-                <HeroSliderItem>2</HeroSliderItem>
-                <HeroSliderItem>3</HeroSliderItem>
-                <HeroSliderItem>4</HeroSliderItem>
+                <SliderItem isActive={true} />
+                <SliderItem />
+                <SliderItem />
+                <SliderItem />
+                <SliderItem />
               </HeroSlider>
             </HeroHeader>
             <HeroImage className="w-auto h-[400px] relative mb-10">

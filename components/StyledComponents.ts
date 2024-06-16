@@ -23,8 +23,6 @@ export const HeroH1 = styled.h1``;
 
 export const HeroSlider = styled.div``;
 
-export const HeroSliderItem = styled.div``;
-
 export const HeroDescription = styled.div`
   background: linear-gradient(180deg, rgba(26, 28, 32, 0) 0%, #1a1c20 63.9%);
 `;
