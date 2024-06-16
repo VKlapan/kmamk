@@ -1,4 +1,4 @@
-import { formatDistanceToNow } from "date-fns";
+import { formatDistanceToNow, lightFormat } from "date-fns";
 
 type Props = {
   type: "short" | "full" | "with-time";
@@ -10,5 +10,6 @@ export const DatePlate = ({ type, date }: Props) => {
   const formattedDate = formatDistanceToNow(new Date(date), {
     addSuffix: true,
   });
-  return <div className="text-white">{formattedDate}</div>;
+  const shortDate = lightFormat(new Date(date), "dd-MM-yyyy");
+  return <div className="text-white text-[10px]">{shortDate}</div>;
 };

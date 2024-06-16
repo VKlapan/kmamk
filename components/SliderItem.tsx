@@ -3,7 +3,7 @@ type Props = {
 };
 
 export const SliderItem = ({ isActive = false }: Props) => {
-  var styles = "h-1 w-10";
+  var styles = "h-1 w-6";
 
   if (isActive) {
     styles = styles + " bg-blue-600";

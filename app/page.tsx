@@ -38,6 +38,7 @@ import {
   SimulatorType,
 } from "@/types";
 import { SliderItem } from "@/components/SliderItem";
+import { NewsCard } from "@/components/news/NewsCard";
 
 const partnersMockup = [
   { id: 1, name: "Partner01", image: "/images/partner01.png" },
@@ -64,7 +65,7 @@ export default async function Home() {
       <main className="flex-grow bg-neutral-900 px-10 pt-4">
         {/* Block: Hero */}
         <HeroWrapper className="flex gap-4 flex-wrap lg:flex-nowrap mb-4">
-          <HeroMain className="relative flex flex-col flex-grow w-full lg:min-w-[700px] ">
+          <HeroMain className="relative flex flex-col flex-grow lg:min-w-[700px] ">
             <HeroHeader className="flex justify-between items-center">
               <HeroH1Wrapper className="flex gap-1 mb-2">
                 <HeroH1Icon className="flex justify-center items-center">
@@ -82,7 +83,7 @@ export default async function Home() {
                 <SliderItem />
               </HeroSlider>
             </HeroHeader>
-            <HeroImage className="w-auto h-[400px] relative mb-10">
+            <HeroImage className="w-auto h-[492px] relative mb-10">
               <Image
                 src={"/images/anons.png"}
                 fill
@@ -94,7 +95,7 @@ export default async function Home() {
               />
             </HeroImage>
             <HeroDescription className="flex flex-col gap-3 absolute bottom-0 w-full px-5 py-4">
-              <div className="flex justify-between pt-4 ">
+              <div className="flex justify-between items-center pt-4 ">
                 <Labels className="flex gap-1">
                   <Label
                     type="simulator"
@@ -104,14 +105,6 @@ export default async function Home() {
                     type="newsCategory"
                     value={typedMockups.newsCategories.broadcast}
                   />
-                  <Label
-                    type="eventStatus"
-                    value={eventStatuses["in-process"]}
-                  />
-                  <Label
-                    type="eventStatus"
-                    value={eventStatuses["in-registration"]}
-                  />
                 </Labels>
                 <DatePlate type="short" date={new Date(Date.now())} />
               </div>
@@ -120,8 +113,21 @@ export default async function Home() {
               </div>
             </HeroDescription>
           </HeroMain>
-          <HeroList className="w-full lg:w-72 bg-neutral-600">
-            NEWS LIST
+          <HeroList className="w-full lg:w-72">
+            <HeroH1Wrapper className="flex gap-1 mb-2">
+              <HeroH1Icon className="flex justify-center items-center">
+                <svg className="w-4 h-4">
+                  <use href="/icons/utils-sprite.svg#icon-news"></use>
+                </svg>
+              </HeroH1Icon>
+              <HeroH1 className="text-white">Новини</HeroH1>
+            </HeroH1Wrapper>
+            <div className="flex flex-wrap gap-4">
+              <NewsCard />
+              <NewsCard />
+              <NewsCard />
+              <NewsCard />
+            </div>
           </HeroList>
         </HeroWrapper>
         <PartnersList className="mb-4 w-full">
