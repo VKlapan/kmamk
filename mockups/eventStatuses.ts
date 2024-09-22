@@ -1,5 +1,3 @@
-import { EventStatusType } from "@/types";
-
 type EventStatus = {
   key: EventStatusType;
   name: string;

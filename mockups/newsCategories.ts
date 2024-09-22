@@ -1,5 +1,3 @@
-import { NewsCategoryType } from "@/types";
-
 type Category = {
   key: NewsCategoryType;
   name: string;

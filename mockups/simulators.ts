@@ -1,5 +1,3 @@
-import { SimulatorType } from "@/types";
-
 type Simulator = {
   key: SimulatorType;
   name: string;

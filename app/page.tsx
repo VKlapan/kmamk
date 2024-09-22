@@ -31,14 +31,10 @@ import { newsCategories } from "@/mockups/newsCategories";
 import { simulators } from "@/mockups/simulators";
 
 import mockups from "@/mockups/mockups.json";
-import {
-  EventStatusType,
-  MockupType,
-  NewsCategoryType,
-  SimulatorType,
-} from "@/types";
+
 import { SliderItem } from "@/components/SliderItem";
 import { NewsCard } from "@/components/news/NewsCard";
+import { Calendar } from "@/components/calendars";
 
 const partnersMockup = [
   { id: 1, name: "Partner01", image: "/images/partner01.png" },
@@ -133,8 +129,9 @@ export default async function Home() {
         <PartnersList className="mb-4 w-full">
           <Partners partners={partnersMockup} />
         </PartnersList>
-        <EventsCalendar className="mb-4 w-full bg-neutral-600">
-          Календар змагань
+        <div>Календар змагань</div>
+        <EventsCalendar className="mb-4 w-full py-3 px-2 bg-neutral-600">
+          <Calendar />
         </EventsCalendar>
         <VideoList className="mb-4 w-full bg-neutral-600">Відео</VideoList>
 

@@ -1,28 +1,56 @@
-export type LabelType = "simulator" | "newsCategory" | "eventStatus";
-export type EventStatusType =
-  | "in-process"
-  | "in-registration"
-  | "registration-date";
+type LabelType = "simulator" | "newsCategory" | "eventStatus";
 
-export type NewsCategoryType = "broadcast" | "anons" | "report";
+type EventStatusType = "in-process" | "in-registration" | "registration-date";
 
-export type SimulatorType = "iracing" | "assetto-corsa" | "raceroom";
+type NewsCategoryType = "broadcast" | "anons" | "report";
 
-export type Partner = {
+type SimulatorType = "iracing" | "assetto-corsa" | "raceroom";
+
+type Partner = {
   id: number;
   name: string;
   image: string;
 };
 
-export type LabelKeyType = EventStatusType | NewsCategoryType | SimulatorType;
+type LabelKeyType = EventStatusType | NewsCategoryType | SimulatorType;
 
-export type LabelItemType<T extends LabelKeyType> = {
+type LabelItemType<T extends LabelKeyType> = {
   key: T;
   name: string;
 };
 
-export type MockupNameType = "eventStatuses" | "simulators" | "newsCategories";
+type MockupNameType = "eventStatuses" | "simulators" | "newsCategories";
 
-export type MockupType<T extends LabelKeyType> = {
+type MockupType<T extends LabelKeyType> = {
   [key in T]: LabelItemType<key>;
+};
+
+type CalendarSelectItemType = {
+  name: string;
+  icon?: string;
+};
+
+type RaceEventType = {
+  id: number;
+  title: string;
+  type: string;
+  status: string;
+  simulator: string;
+  dlc: number;
+  track: string;
+  cars: number[];
+  refereeing: number;
+  refereePanel: number[];
+  createdat: string;
+  image: string;
+  description: string;
+  viewcount: number;
+  eventsrelation: number[];
+  driversrelation: number[];
+  partners: number[];
+  serverStartAt: string;
+  eventStrtAt: string;
+  registrationSatrtAt: string;
+  registrationEndAt: string;
+  link: string;
 };

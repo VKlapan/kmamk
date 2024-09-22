@@ -2,12 +2,6 @@ import { Labels } from "../StyledComponents";
 import { DatePlate, Label } from "@/components";
 
 import mockups from "@/mockups/mockups.json";
-import {
-  EventStatusType,
-  MockupType,
-  NewsCategoryType,
-  SimulatorType,
-} from "@/types";
 
 export const NewsCard = () => {
   const typedMockups = {

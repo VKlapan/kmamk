@@ -1,5 +1,3 @@
-import { LabelItemType, LabelKeyType, LabelType } from "@/types";
-
 type Props = {
   type: LabelType;
   value: LabelItemType<LabelKeyType>;

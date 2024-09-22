@@ -1,0 +1,10 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-chevron_down" viewBox="0 0 32 32">
+<path fill="#fff" style="fill: var(--color1, #fff)" d="M7.293 11.293c0.391-0.391 1.024-0.391 1.414 0l7.293 7.293 7.293-7.293c0.39-0.391 1.024-0.391 1.414 0s0.391 1.024 0 1.414l-8 8c-0.39 0.391-1.024 0.391-1.414 0l-8-8c-0.391-0.391-0.391-1.024 0-1.414z"></path>
+</symbol>
+<symbol id="icon-right" viewBox="0 0 33 32">
+<path fill="#fff" style="fill: var(--color1, #fff)" d="M18.391 7.057c0.521-0.521 1.365-0.521 1.886 0l8 8c0.521 0.521 0.521 1.365 0 1.886l-8 8c-0.521 0.521-1.365 0.521-1.886 0s-0.521-1.365 0-1.886l5.724-5.724h-18.114c-0.736 0-1.333-0.597-1.333-1.333s0.597-1.333 1.333-1.333h18.114l-5.724-5.724c-0.521-0.521-0.521-1.365 0-1.886z"></path>
+</symbol>
+</defs>
+</svg>

@@ -1,4 +1,3 @@
-import { Partner } from "@/types";
 import Image from "next/image";
 
 type Props = {
