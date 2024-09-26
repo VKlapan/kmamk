@@ -58,7 +58,7 @@ export default async function Home() {
   return (
     <>
       <header className="flex-none bg-neutral-600 px-10">HEADER</header>
-      <main className="flex-grow bg-neutral-900 px-10 pt-4">
+      <main className="flex-grow bg-bg1 px-10 pt-4">
         {/* Block: Hero */}
         <HeroWrapper className="flex gap-4 flex-wrap lg:flex-nowrap mb-4">
           <HeroMain className="relative flex flex-col flex-grow lg:min-w-[700px] ">
@@ -130,7 +130,7 @@ export default async function Home() {
           <Partners partners={partnersMockup} />
         </PartnersList>
         <div>Календар змагань</div>
-        <EventsCalendar className="mb-4 w-full py-3 px-2 bg-neutral-600">
+        <EventsCalendar className="mb-4 w-full py-3 px-2 bg-bg2">
           <Calendar />
         </EventsCalendar>
         <VideoList className="mb-4 w-full bg-neutral-600">Відео</VideoList>

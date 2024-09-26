@@ -11,6 +11,11 @@ const config: Config = {
       lg: "1180px",
     },
     extend: {
+      colors: {
+        bg1: "#131314",
+        bg2: "#1A1C20",
+        bg3: "#2A2E35",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
