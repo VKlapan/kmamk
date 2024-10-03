@@ -12,7 +12,7 @@ export const CalendarCard = ({ raceEvent }: Props) => {
         <div className="text-sm font-medium text-white">{title}</div>
         <div className="w-full flex flex-col gap-[10px]">
           <div className="flex justify-between">
-            <CalendarCardDetailsItem itemType="events" value={"5 етапів"} />
+            <CalendarCardDetailsItem itemType="event" value={"5 етапів"} />
             <CalendarCardDetailsItem itemType="game" value={"ACC"} />
           </div>
           <div className="flex justify-between">

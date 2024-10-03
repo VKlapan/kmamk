@@ -25,7 +25,7 @@ export const CalendarSelect = ({ label, items }: Props) => {
         <CalendarSelectItem item={selectedItem} />
         <div className="absolute top-1/2 right-0 -translate-y-1/2">
           <svg className="w-4 h-4">
-            <use href="/icons/tools.svg#icon-chevron_down"></use>
+            <use href="/icons/tools-sprite.svg#icon-chevron_down"></use>
           </svg>
         </div>
       </div>

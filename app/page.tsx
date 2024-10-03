@@ -9,9 +9,9 @@ import {
   HeroImage,
   HeroList,
   HeroHeader,
-  HeroH1,
-  HeroH1Icon,
-  HeroH1Wrapper,
+  HeroH2,
+  HeroH2Icon,
+  HeroH2Wrapper,
   HeroDescription,
   Labels,
   NewsSimulator,
@@ -63,14 +63,14 @@ export default async function Home() {
         <HeroWrapper className="flex gap-4 flex-wrap lg:flex-nowrap mb-4">
           <HeroMain className="relative flex flex-col flex-grow lg:min-w-[700px] ">
             <HeroHeader className="flex justify-between items-center">
-              <HeroH1Wrapper className="flex gap-1 mb-2">
-                <HeroH1Icon className="flex justify-center items-center">
+              <HeroH2Wrapper className="flex gap-1 mb-2">
+                <HeroH2Icon className="flex justify-center items-center">
                   <svg className="w-4 h-4">
-                    <use href="/icons/utils-sprite.svg#icon-hot"></use>
+                    <use href="/icons/categories-sprite.svg#icon-hot"></use>
                   </svg>
-                </HeroH1Icon>
-                <HeroH1 className="text-white">Найголовніше</HeroH1>
-              </HeroH1Wrapper>
+                </HeroH2Icon>
+                <HeroH2 className="text-white">Найголовніше</HeroH2>
+              </HeroH2Wrapper>
               <HeroSlider className="flex gap-1">
                 <SliderItem isActive={true} />
                 <SliderItem />
@@ -110,14 +110,14 @@ export default async function Home() {
             </HeroDescription>
           </HeroMain>
           <HeroList className="w-full lg:w-72">
-            <HeroH1Wrapper className="flex gap-1 mb-2">
-              <HeroH1Icon className="flex justify-center items-center">
+            <HeroH2Wrapper className="flex gap-1 mb-2">
+              <HeroH2Icon className="flex justify-center items-center">
                 <svg className="w-4 h-4">
-                  <use href="/icons/utils-sprite.svg#icon-news"></use>
+                  <use href="/icons/categories-sprite.svg#icon-news"></use>
                 </svg>
-              </HeroH1Icon>
-              <HeroH1 className="text-white">Новини</HeroH1>
-            </HeroH1Wrapper>
+              </HeroH2Icon>
+              <HeroH2 className="text-white">Новини</HeroH2>
+            </HeroH2Wrapper>
             <div className="flex flex-wrap gap-4">
               <NewsCard />
               <NewsCard />
@@ -129,11 +129,29 @@ export default async function Home() {
         <PartnersList className="mb-4 w-full">
           <Partners partners={partnersMockup} />
         </PartnersList>
-        <div>Календар змагань</div>
+        <HeroH2Wrapper className="flex gap-1 mb-2">
+          <HeroH2Icon className="flex justify-center items-center">
+            <svg className="w-4 h-4">
+              <use href="/icons/categories-sprite.svg#icon-calendar"></use>
+            </svg>
+          </HeroH2Icon>
+          <HeroH2 className="text-white">Календар змагань</HeroH2>
+        </HeroH2Wrapper>
         <EventsCalendar className="mb-4 w-full py-3 px-2 bg-bg2">
           <Calendar />
         </EventsCalendar>
-        <VideoList className="mb-4 w-full bg-neutral-600">Відео</VideoList>
+
+        <HeroH2Wrapper className="flex gap-1 mb-2">
+          <HeroH2Icon className="flex justify-center items-center">
+            <svg className="w-4 h-4">
+              <use href="/icons/categories-sprite.svg#icon-video"></use>
+            </svg>
+          </HeroH2Icon>
+          <HeroH2 className="text-white">Відео</HeroH2>
+        </HeroH2Wrapper>
+        <VideoList className="mb-4 w-full py-3 px-2 bg-bg2">
+          <div className="mb-4 w-full bg-neutral-600">Відео</div>
+        </VideoList>
 
         {/* <AuthButton />
         <pre>{JSON.stringify(data, null, 2)}</pre> */}
