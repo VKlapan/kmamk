@@ -24,17 +24,21 @@ import {
   HeroSlider,
 } from "@/components/StyledComponents";
 
-import { DatePlate, Label, Partners } from "@/components";
+import {
+  Calendar,
+  DatePlate,
+  Label,
+  NewsCard,
+  Partners,
+  SliderItem,
+  Video,
+} from "@/components";
 
 import { eventStatuses } from "@/mockups/eventStatuses";
 import { newsCategories } from "@/mockups/newsCategories";
 import { simulators } from "@/mockups/simulators";
 
 import mockups from "@/mockups/mockups.json";
-
-import { SliderItem } from "@/components/SliderItem";
-import { NewsCard } from "@/components/news/NewsCard";
-import { Calendar } from "@/components/calendars";
 
 const partnersMockup = [
   { id: 1, name: "Partner01", image: "/images/partner01.png" },
@@ -150,7 +154,7 @@ export default async function Home() {
           <HeroH2 className="text-white">Відео</HeroH2>
         </HeroH2Wrapper>
         <VideoList className="mb-4 w-full py-3 px-2 bg-bg2">
-          <div className="mb-4 w-full bg-neutral-600">Відео</div>
+          <Video />
         </VideoList>
 
         {/* <AuthButton />

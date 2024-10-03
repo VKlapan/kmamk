@@ -54,3 +54,16 @@ type RaceEventType = {
   registrationEndAt: string;
   link: string;
 };
+
+type VideoType = {
+  id: number;
+  name: string;
+  createdat: string;
+  card: string;
+  type: string;
+  // type: "interview" | "live" | "review" | "preview";
+  event: number;
+  description: string;
+  link: string;
+  viewcount: number;
+};
