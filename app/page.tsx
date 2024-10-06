@@ -61,7 +61,9 @@ export default async function Home() {
 
   return (
     <>
-      <header className="flex-none bg-neutral-600 px-10">HEADER</header>
+      <header className="flex-none bg-neutral-600 px-10">
+        <div className="lg:w-[1180px] mx-auto">HEADER</div>
+      </header>
       <main className="flex-grow bg-bg1 pt-4 pb-20">
         <div className="lg:w-[1180px] mx-auto">
           {/* Block: Hero */}
@@ -172,7 +174,49 @@ export default async function Home() {
         </div>
       </main>
       <footer className="flex-none bg-bg2 py-8">
-        <div className="lg:w-[1180px] mx-auto">FOOTER</div>
+        <div className="lg:w-[1180px] mx-auto">
+          <div className="flex justify-between text-white text-sm font-medium mb-10">
+            <img src="kmamk-logo.svg" alt="" className="w-[188px]" />
+            <div>
+              <div className="mb-4 text-[16px] font-semibold">
+                Навігація по сайту
+              </div>
+              <nav className="flex flex-col gap-1">
+                <div>Новини</div>
+                <div>Календар змагань</div>
+                <div>Відео</div>
+              </nav>
+            </div>
+            <div>
+              <div className="mb-4 text-[16px] font-semibold">
+                Наші контакти
+              </div>
+              <div className="flex flex-col gap-1">
+                <div>testmail@gmail.com</div>
+                <div>+38 066 999 00 12</div>
+                <div>+38 066 999 00 13</div>
+              </div>
+            </div>
+            <div>
+              <div className="mb-4 text-[16px] font-semibold">
+                Ми у соцмережах
+              </div>
+              <div className="flex gap-1">
+                <div>DS</div>
+                <div>TG</div>
+                <div>IG</div>
+                <div>YT</div>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-between text-white text-xs">
+            <div>&copy; 2010-2024 KMAMK</div>
+            <div className="flex gap-4">
+              <div>Дизайн: Тимур Бірюков</div>
+              <div>Розробка: ProFormula Team</div>
+            </div>
+          </div>
+        </div>
       </footer>
     </>
   );
