@@ -15,11 +15,11 @@ export const HeroList = styled.div``;
 
 export const HeroHeader = styled.div``;
 
-export const HeroH2Wrapper = styled.div``;
+export const H2Wrapper = styled.div``;
 
-export const HeroH2Icon = styled.div``;
+export const H2Icon = styled.div``;
 
-export const HeroH2 = styled.h2``;
+export const H2 = styled.h2``;
 
 export const HeroSlider = styled.div``;
 

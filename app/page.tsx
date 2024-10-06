@@ -9,9 +9,9 @@ import {
   HeroImage,
   HeroList,
   HeroHeader,
-  HeroH2,
-  HeroH2Icon,
-  HeroH2Wrapper,
+  H2,
+  H2Icon,
+  H2Wrapper,
   HeroDescription,
   Labels,
   NewsSimulator,
@@ -62,19 +62,19 @@ export default async function Home() {
   return (
     <>
       <header className="flex-none bg-neutral-600 px-10">HEADER</header>
-      <main className="flex-grow bg-bg1 px-10 pt-4">
+      <main className="flex-grow bg-bg1 px-10 pt-4 pb-20">
         {/* Block: Hero */}
         <HeroWrapper className="flex gap-4 flex-wrap lg:flex-nowrap mb-4">
           <HeroMain className="relative flex flex-col flex-grow lg:min-w-[700px] ">
             <HeroHeader className="flex justify-between items-center">
-              <HeroH2Wrapper className="flex gap-1 mb-2">
-                <HeroH2Icon className="flex justify-center items-center">
+              <H2Wrapper className="flex gap-1 mb-2">
+                <H2Icon className="flex justify-center items-center">
                   <svg className="w-4 h-4">
                     <use href="/icons/categories-sprite.svg#icon-hot"></use>
                   </svg>
-                </HeroH2Icon>
-                <HeroH2 className="text-white">Найголовніше</HeroH2>
-              </HeroH2Wrapper>
+                </H2Icon>
+                <H2 className="text-white">Найголовніше</H2>
+              </H2Wrapper>
               <HeroSlider className="flex gap-1">
                 <SliderItem isActive={true} />
                 <SliderItem />
@@ -114,14 +114,14 @@ export default async function Home() {
             </HeroDescription>
           </HeroMain>
           <HeroList className="w-full lg:w-72">
-            <HeroH2Wrapper className="flex gap-1 mb-2">
-              <HeroH2Icon className="flex justify-center items-center">
+            <H2Wrapper className="flex gap-1 mb-2">
+              <H2Icon className="flex justify-center items-center">
                 <svg className="w-4 h-4">
                   <use href="/icons/categories-sprite.svg#icon-news"></use>
                 </svg>
-              </HeroH2Icon>
-              <HeroH2 className="text-white">Новини</HeroH2>
-            </HeroH2Wrapper>
+              </H2Icon>
+              <H2 className="text-white">Новини</H2>
+            </H2Wrapper>
             <div className="flex flex-wrap gap-4">
               <NewsCard />
               <NewsCard />
@@ -133,29 +133,38 @@ export default async function Home() {
         <PartnersList className="mb-4 w-full">
           <Partners partners={partnersMockup} />
         </PartnersList>
-        <HeroH2Wrapper className="flex gap-1 mb-2">
-          <HeroH2Icon className="flex justify-center items-center">
+
+        <H2Wrapper className="flex gap-1 mb-2">
+          <H2Icon className="flex justify-center items-center">
             <svg className="w-4 h-4">
               <use href="/icons/categories-sprite.svg#icon-calendar"></use>
             </svg>
-          </HeroH2Icon>
-          <HeroH2 className="text-white">Календар змагань</HeroH2>
-        </HeroH2Wrapper>
+          </H2Icon>
+          <H2 className="text-white">Календар змагань</H2>
+        </H2Wrapper>
         <EventsCalendar className="mb-4 w-full py-3 px-2 bg-bg2">
           <Calendar />
         </EventsCalendar>
 
-        <HeroH2Wrapper className="flex gap-1 mb-2">
-          <HeroH2Icon className="flex justify-center items-center">
+        <H2Wrapper className="flex gap-1 mb-2">
+          <H2Icon className="flex justify-center items-center">
             <svg className="w-4 h-4">
               <use href="/icons/categories-sprite.svg#icon-video"></use>
             </svg>
-          </HeroH2Icon>
-          <HeroH2 className="text-white">Відео</HeroH2>
-        </HeroH2Wrapper>
+          </H2Icon>
+          <H2 className="text-white">Відео</H2>
+        </H2Wrapper>
         <VideoList className="mb-4 w-full py-3 px-2 bg-bg2">
           <Video />
         </VideoList>
+        <div className="flex justify-center">
+          <div className="flex justify-center items-center gap-4 w-72 h-8 py-[10px] px-5 border-1 rounded bg-bg3 text-white text-sm font-medium">
+            <div>Дивитись більше відео</div>
+            <svg className="w-6 h-6">
+              <use href="/icons/tools-sprite.svg#icon-right"></use>
+            </svg>
+          </div>
+        </div>
 
         {/* <AuthButton />
         <pre>{JSON.stringify(data, null, 2)}</pre> */}
