@@ -61,10 +61,27 @@ export default async function Home() {
 
   return (
     <>
-      <header className="flex-none bg-neutral-600 px-10">
-        <div className="lg:w-[1180px] mx-auto">HEADER</div>
+      <header className="flex-none bg-bg2 py-3 border-b border-stroke_default">
+        <div className="lg:w-[1180px] mx-auto">
+          <div className="flex justify-between items-center text-white font-medium">
+            <img src="kmamk-logo.svg" alt="" className="w-[188px]" />
+            <div>
+              <nav className="flex items-center gap-12 underline underline-offset-8">
+                <div>Новини</div>
+                <div>Календар змагань</div>
+                <div>Відео</div>
+              </nav>
+            </div>
+            <div className="py-2 px-3 flex gap-2 items-center text-text4 border border-text4 rounded">
+              <div className="text-[16px] font-semibold">UA</div>
+              <svg className="w-5 h-5 fill-text4">
+                <use href="/icons/tools-sprite.svg#icon-chevron_down"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
       </header>
-      <main className="flex-grow bg-bg1 pt-4 pb-20">
+      <main className="flex-grow bg-bg1 pt-8 pb-20">
         <div className="lg:w-[1180px] mx-auto">
           {/* Block: Hero */}
           <HeroWrapper className="flex gap-4 flex-wrap lg:flex-nowrap mb-4">
@@ -173,7 +190,7 @@ export default async function Home() {
         <pre>{JSON.stringify(data, null, 2)}</pre> */}
         </div>
       </main>
-      <footer className="flex-none bg-bg2 py-8">
+      <footer className="flex-none bg-bg2 py-8 border-t border-stroke_default">
         <div className="lg:w-[1180px] mx-auto">
           <div className="flex justify-between text-white text-sm font-medium mb-10">
             <img src="kmamk-logo.svg" alt="" className="w-[188px]" />
@@ -212,8 +229,14 @@ export default async function Home() {
           <div className="flex justify-between text-white text-xs">
             <div>&copy; 2010-2024 KMAMK</div>
             <div className="flex gap-4">
-              <div>Дизайн: Тимур Бірюков</div>
-              <div>Розробка: ProFormula Team</div>
+              <div>
+                <span className="text-text4">Дизайн: </span>
+                <span className="text-text2">Тимур Бірюков</span>
+              </div>
+              <div>
+                <span className="text-text4">Розробка: </span>
+                <span className="text-text2">ProFormula Team</span>
+              </div>
             </div>
           </div>
         </div>

@@ -15,6 +15,10 @@ const config: Config = {
         bg1: "#131314",
         bg2: "#1A1C20",
         bg3: "#2A2E35",
+        stroke_default: "#2E3135",
+        text2: "#E1E1E1",
+        text3: "#A5A5A5",
+        text4: "#878787",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
