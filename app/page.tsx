@@ -30,6 +30,7 @@ import {
   Label,
   NewsCard,
   Partners,
+  Slider,
   SliderItem,
   Video,
 } from "@/components";
@@ -47,6 +48,12 @@ const partnersMockup = [
   { id: 4, name: "Partner04", image: "/images/partner04.png" },
   { id: 5, name: "Partner05", image: "/images/partner05.png" },
 ];
+
+import { EmblaOptionsType } from "embla-carousel";
+
+const OPTIONS: EmblaOptionsType = {};
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies });
@@ -86,7 +93,7 @@ export default async function Home() {
           {/* Block: Hero */}
           <HeroWrapper className="flex gap-4 flex-wrap lg:flex-nowrap mb-4">
             <HeroMain className="relative flex flex-col flex-grow lg:min-w-[700px] ">
-              <HeroHeader className="flex justify-between items-center">
+              <HeroHeader className="absolute top-0 left-0 w-full flex justify-between items-center">
                 <H2Wrapper className="flex gap-1 mb-2">
                   <H2Icon className="flex justify-center items-center">
                     <svg className="w-4 h-4">
@@ -95,43 +102,10 @@ export default async function Home() {
                   </H2Icon>
                   <H2 className="text-white">Найголовніше</H2>
                 </H2Wrapper>
-                <HeroSlider className="flex gap-1">
-                  <SliderItem isActive={true} />
-                  <SliderItem />
-                  <SliderItem />
-                  <SliderItem />
-                  <SliderItem />
-                </HeroSlider>
               </HeroHeader>
-              <HeroImage className="w-auto h-[492px] relative mb-10">
-                <Image
-                  src={"/images/anons.png"}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  style={{
-                    objectFit: "cover",
-                  }}
-                  alt="Anons Image"
-                />
-              </HeroImage>
-              <HeroDescription className="flex flex-col gap-3 absolute bottom-0 w-full px-5 py-4">
-                <div className="flex justify-between items-center pt-4 ">
-                  <Labels className="flex gap-1">
-                    <Label
-                      type="simulator"
-                      value={typedMockups.simulators.iracing}
-                    />
-                    <Label
-                      type="newsCategory"
-                      value={typedMockups.newsCategories.broadcast}
-                    />
-                  </Labels>
-                  <DatePlate type="short" date={new Date(Date.now())} />
-                </div>
-                <div className="text-white text-2xl ">
-                  Запрошуємо на пряму трансляцію першої клубної гонки 2024 року!
-                </div>
-              </HeroDescription>
+              <HeroWrapper className="mt-2">
+                <Slider slides={SLIDES} options={OPTIONS} />
+              </HeroWrapper>
             </HeroMain>
             <HeroList className="w-full lg:w-72">
               <H2Wrapper className="flex gap-1 mb-2">
